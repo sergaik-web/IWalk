@@ -7,7 +7,7 @@ const reducer = (state = initialState, action) => {
     case 'SET_I_WALK_STATUS':
       return {
         ...state,
-        iWalk: true
+        iWalk: !state.iWalk
       };
     default:
       return {
