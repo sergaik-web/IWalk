@@ -1,53 +1,95 @@
-import React from 'react';
-import {StyleSheet, Text, TouchableOpacity, View} from "react-native";
-import {StatusBar} from "expo-status-bar";
-import {connect} from "react-redux";
+import React from "react";
+import {
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
+  SafeAreaView,
+} from "react-native";
+import { StatusBar } from "expo-status-bar";
+import { connect } from "react-redux";
 import { setIWalkStatus } from "../Actions/actions";
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: "#fff",
+    alignItems: "center",
+    justifyContent: "center",
+    marginHorizontal: 16,
   },
-  button: {
+  buttonActive: {
     borderRadius: 25,
-    backgroundColor: 'red',
+    backgroundColor: "red",
     padding: 25,
   },
-  buttonText: {
-    color: '#fff',
+  buttonDeactive: {
+    borderRadius: 25,
+    backgroundColor: "white",
+    padding: 25,
+    border: "solid red 1px",
+  },
+  buttonTextActive: {
+    color: "white",
     fontSize: 25,
-  }
+  },
+  buttonTextDeactive: {
+    color: "red",
+    fontSize: 25,
+  },
+  title: {
+    textAlign: "center",
+    marginVertical: 8,
+    marginTop: 200,
+    fontSize: 20,
+  },
 });
 
 const MainPage = (props) => {
+  const { setIWalkStatus, iWalk } = props;
+  const buttonData = ["Я ГУЛЯЮ!", "ЗАКОНЧИТЬ ГУЛЯТЬ"];
+
   return (
-    <View style={styles.container}>
-      <TouchableOpacity style={styles.button}>
-        <Text
-          style={styles.buttonText}
-          onPress={()=> {
-              props.setIWalkStatus();
-              console.log(props.iwalk)
-            }
-          }
+    <SafeAreaView style={styles.container}>
+      <View style={styles.container}>
+        <TouchableOpacity
+          style={!iWalk ? styles.buttonActive : styles.buttonDeactive}
+          enabled={!iWalk}
+          onPress={() => {
+            console.log(iWalk);
+            setIWalkStatus();
+          }}
         >
-          Я Гуляю!
+          <Text
+            style={!iWalk ? styles.buttonTextActive : styles.buttonTextDeactive}
+          >
+            {!iWalk ? buttonData[0] : buttonData[1]}
+          </Text>
+        </TouchableOpacity>
+        <Text style={styles.title}>
+          Кнопка немедленного оповещения родных о том что у тебя возникли
+          проблемы (рассылка смс)
         </Text>
-      </TouchableOpacity>
-      <StatusBar style="auto" />
-    </View>
-  )
+        <TouchableOpacity
+          style={styles.buttonActive}
+          onPress={() => {
+            console.log("SOS");
+          }}
+        >
+          <Text style={styles.buttonTextActive}>SOS!</Text>
+        </TouchableOpacity>
+        <StatusBar style="auto" />
+      </View>
+    </SafeAreaView>
+  );
 };
 
 const mapStateToProps = (state) => {
   return {
-    iwalk: state.iWalk
-  }
+    iWalk: state.iWalk,
+  };
 };
 
-const mapDispatchToProps = {setIWalkStatus};
+const mapDispatchToProps = { setIWalkStatus };
 
 export default connect(mapStateToProps, mapDispatchToProps)(MainPage);
