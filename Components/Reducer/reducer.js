@@ -4,15 +4,15 @@ const initialState = {
 
 const reducer = (state = initialState, action) => {
   switch (action.type) {
-    case 'SET_I_WALK_STATUS':
+    case "SET_I_WALK_STATUS":
       return {
         ...state,
-        iWalk: !state.iWalk
+        iWalk: !state.iWalk,
       };
     default:
       return {
-        ...state
-      }
+        ...state,
+      };
   }
 };
 
