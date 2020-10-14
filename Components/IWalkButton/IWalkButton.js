@@ -13,9 +13,23 @@ const IWalkButton = (props) => {
           console.log(iWalk);
         }}
       >
-        <Text>{!iWalk ? buttonData[0] : buttonData[1]}</Text>
+        <Text style={styles.iWalkButtonText}>{!iWalk ? buttonData[0] : buttonData[1]}</Text>
       </Button>
   )
+};
+
+const styles = {
+  iWalkButton: {
+    backgroundColor: 'white',
+    borderRadius: 15,
+    borderColor: 'red',
+    borderWidth: 1,
+    height: 150
+  },
+  iWalkButtonText: {
+    fontSize: 22,
+    color: 'red'
+  }
 };
 
 export default IWalkButton;

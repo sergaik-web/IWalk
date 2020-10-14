@@ -2,18 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="92682c7d-586e-4524-8666-a397414ab212" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Components/IWalkButton/IWalkButton.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Components/PageFooter/PageFooter.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Components/PageHeader/PageHeader.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Components/WarningRow/WarningRow.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Components/ContactsList/ContactsList.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Components/Actions/actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/Components/Actions/actions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Components/IWalkButton/IWalkButton.js" beforeDir="false" afterPath="$PROJECT_DIR$/Components/IWalkButton/IWalkButton.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Components/MainPage/MainPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/Components/MainPage/MainPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Components/Reducer/reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/Components/Reducer/reducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Components/Store/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/Components/Store/store.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Components/PageFooter/PageFooter.js" beforeDir="false" afterPath="$PROJECT_DIR$/Components/PageFooter/PageFooter.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Components/PageHeader/PageHeader.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Components/WarningRow/WarningRow.js" beforeDir="false" afterPath="$PROJECT_DIR$/Components/WarningRow/WarningRow.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.json" beforeDir="false" afterPath="$PROJECT_DIR$/app.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/babel.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/babel.config.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -89,6 +86,10 @@
       <workItem from="1602572738439" duration="11683000" />
       <workItem from="1602612230720" duration="5980000" />
       <workItem from="1602618358446" duration="3088000" />
+      <workItem from="1602708106342" duration="1247000" />
+      <workItem from="1602709823557" duration="226000" />
+      <workItem from="1602710878265" duration="709000" />
+      <workItem from="1602711598602" duration="803000" />
     </task>
     <task id="LOCAL-00001" summary="feat: add redux in project">
       <created>1602592752595</created>
