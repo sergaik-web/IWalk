@@ -1,6 +1,7 @@
 import { Provider } from "react-redux";
 import MainPage from "./Components/MainPage/MainPage";
 import ContactsList from "./Components/ContactsList/ContactsList";
+import SearchPanel from "./Components/SearchPanel/SearchPanel";
 import store from "./Components/Store/store";
 import React from "react";
 import { AppLoading } from "expo";
@@ -44,7 +45,7 @@ export default class App extends React.Component {
               <Stack.Screen
                 name="Contacts"
                 component={ContactsList}
-                options={{ title: 'Контакты' }}
+                options={{ headerTitle: props => <SearchPanel {...props} /> }}
               />
             </Stack.Navigator>
           </NavigationContainer>

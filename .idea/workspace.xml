@@ -2,8 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="92682c7d-586e-4524-8666-a397414ab212" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Components/ContactsList/ContactsListItems/ContactsListItems.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Components/Scripts/checkedStorage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Components/SearchPanel/SearchPanel.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Components/ContactsList/ContactsList.js" beforeDir="false" afterPath="$PROJECT_DIR$/Components/ContactsList/ContactsList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />

@@ -1,31 +1,47 @@
 import React, {useState, useEffect} from 'react';
-import {Container, Text} from "native-base";
+import {Container, Text, Spinner} from "native-base";
+import ContactsListItems from './ContactsListItems/ContactsListItems';
+import checkedStorage from "../Scripts/checkedStorage";
 import * as Contacts from 'expo-contacts';
 
 const ContactsList = ()=>{
-  const [cont, setContacts] = useState([]);
+  const [cont, setContacts] = useState();
+
   useEffect(() => {
     (async () => {
-      const { status } = await Contacts.requestPermissionsAsync();
-      if (status === 'granted') {
-        const { data } = await Contacts.getContactsAsync();
-
+        const { data } = await Contacts.getContactsAsync({
+          fields: [Contacts.Fields.PhoneNumbers],
+        });
         if (data.length > 0) {
-          const contact = data[356];
+          const contact = data.map(item=>{
+            if (item.phoneNumbers) {
+              return {
+                id: item.id,
+                name: item.name,
+                phone: item.phoneNumbers[0].number
+              }
+            }
+          }).filter(item => item !== undefined);
+          checkedStorage(contact);
           setContacts(contact);
-          console.log(contact);
         }
-      }
     })();
   }, []);
 
+  if (!cont) {
+    return (
+      <Container style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
+        <Spinner color="red" />
+      </Container>
+    )
+  }
+
   return (
     <Container>
-      <Text>
-        {cont ? cont.id : 'loading'}
-      </Text>
+      <ContactsListItems cont={cont}/>
     </Container>
   )
+
 };
 
 export default ContactsList;
