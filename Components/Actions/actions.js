@@ -4,4 +4,11 @@ const setIWalkStatus = () => {
   };
 };
 
-export { setIWalkStatus };
+const setSearchValue = (searchValue) => {
+  return {
+    type: 'SET_SEARCH_VALUE',
+    payload: searchValue
+  }
+};
+
+export { setIWalkStatus, setSearchValue };

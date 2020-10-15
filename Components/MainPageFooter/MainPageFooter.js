@@ -1,7 +1,7 @@
 import {Button, Footer, FooterTab, Text} from "native-base";
 import React from "react";
 
-const PageFooter = ({navigation}) => {
+const MainPageFooter = ({navigation}) => {
   return (
     <Footer>
       <FooterTab >
@@ -29,4 +29,4 @@ const styles = {
   }
 };
 
-export default PageFooter;
+export default MainPageFooter;

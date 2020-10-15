@@ -1,34 +1,18 @@
 import React, {useState, useEffect} from 'react';
 import {Container, Text, Spinner} from "native-base";
 import ContactsListItems from './ContactsListItems/ContactsListItems';
-import checkedStorage from "../Scripts/checkedStorage";
-import * as Contacts from 'expo-contacts';
+import ContactListFooter from "../ContactListFooter/ContactListFooter";
+import getPhoneContacts from "../Scripts/getPhoneContacts";
 
-const ContactsList = ()=>{
-  const [cont, setContacts] = useState();
+const ContactsList = (props) => {
+  const {navigation} = props;
+  const [contacts, setContacts] = useState();
 
   useEffect(() => {
-    (async () => {
-        const { data } = await Contacts.getContactsAsync({
-          fields: [Contacts.Fields.PhoneNumbers],
-        });
-        if (data.length > 0) {
-          const contact = data.map(item=>{
-            if (item.phoneNumbers) {
-              return {
-                id: item.id,
-                name: item.name,
-                phone: item.phoneNumbers[0].number
-              }
-            }
-          }).filter(item => item !== undefined);
-          checkedStorage(contact);
-          setContacts(contact);
-        }
-    })();
+    getPhoneContacts().then(contacts=>setContacts(contacts));
   }, []);
 
-  if (!cont) {
+  if (!contacts) {
     return (
       <Container style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
         <Spinner color="red" />
@@ -38,7 +22,8 @@ const ContactsList = ()=>{
 
   return (
     <Container>
-      <ContactsListItems cont={cont}/>
+      <ContactsListItems contacts={contacts}/>
+      <ContactListFooter navigation={navigation}/>
     </Container>
   )
 

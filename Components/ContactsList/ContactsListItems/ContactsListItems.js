@@ -1,26 +1,32 @@
-import React from 'react';
-import { List, ListItem, Left, Right, Text, Switch } from "native-base";
+import React, {useEffect, useState} from 'react';
+import { List } from "native-base";
+import { connect } from "react-redux";
+import filterContacts from "../../Scripts/filterContacts";
+import ListItems from './ListItem';
 
 const ContactsListItems = (props) => {
-  const {cont} = props;
-  const listItems = cont.filter(item => item !== undefined);
+  const {contacts, searchValue} = props;
+  const [viewContacts, setViewContacts] = useState(contacts);
+
+  useEffect(()=>{
+    setViewContacts(filterContacts(contacts, searchValue));
+  }, [searchValue, contacts]);
 
   return (
     <List
-      dataArray={listItems}
+      dataArray={viewContacts}
       renderRow={(item) =>
-        <ListItem>
-          <Left>
-            <Text>{item.name}</Text>
-          </Left>
-          <Right>
-            <Switch/>
-          </Right>
-        </ListItem>
+        <ListItems item={item} />
       }
     >
     </List>
   )
 };
 
-export default ContactsListItems;
+const mapStateToProps = (state) => {
+  return {
+    searchValue: state.searchValue
+  }
+};
+
+export default connect(mapStateToProps)(ContactsListItems);

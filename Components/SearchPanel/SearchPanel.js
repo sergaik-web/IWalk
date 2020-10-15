@@ -1,21 +1,32 @@
 import {Icon, Input, InputGroup} from "native-base";
-import React, {useState} from 'react';
+import React from 'react';
+import {setSearchValue} from "../Actions/actions";
+import {connect} from "react-redux";
 
-const SearchPanel = () => {
-  const [value, onChangeText] = useState();
+const SearchPanel = (props) => {
+  const {searchValue, setSearchValue} = props;
+
   return (
     <InputGroup>
       <Icon name="ios-search" />
         <Input
           placeholder="Search"
           onChangeText={(text) => {
-            onChangeText(text);
+            setSearchValue(text);
           }}
-          value={value}
+          value={searchValue}
         />
       <Icon name="ios-people" />
     </InputGroup>
   )
 };
 
-export default SearchPanel;
+const mapStateToProps = (state) => {
+  return {
+    searchValue: state.searchValue
+  }
+};
+
+const mapDispatchToProps = { setSearchValue };
+
+export default connect(mapStateToProps, mapDispatchToProps)(SearchPanel);

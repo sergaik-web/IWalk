@@ -1,7 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import { setIWalkStatus } from "../Actions/actions";
-import PageFooter from "../PageFooter/PageFooter";
+import MainPageFooter from "../MainPageFooter/MainPageFooter";
 import IWalkButton from "../IWalkButton/IWalkButton";
 import WarningRow from "../WarningRow/WarningRow";
 import {
@@ -23,7 +23,7 @@ const MainPage = (props) => {
           <WarningRow/>
         </Grid>
       </Content>
-      <PageFooter navigation={navigation}/>
+      <MainPageFooter navigation={navigation}/>
     </Container>
   );
 };

@@ -1,5 +1,6 @@
 const initialState = {
   iWalk: false,
+  searchValue: ''
 };
 
 const reducer = (state = initialState, action) => {
@@ -8,6 +9,11 @@ const reducer = (state = initialState, action) => {
       return {
         ...state,
         iWalk: !state.iWalk,
+      };
+    case 'SET_SEARCH_VALUE':
+      return {
+        ...state,
+        searchValue: action.payload
       };
     default:
       return {
