@@ -21,7 +21,11 @@
       "favicon": "./assets/favicon.png"
     },
     "android": {
-      "permissions": [ "WRITE_EXTERNAL_STORAGE", "WRITE_CONTACTS", "READ_CONTACTS" ]
+      "permissions": [
+        "WRITE_EXTERNAL_STORAGE",
+        "WRITE_CONTACTS",
+        "READ_CONTACTS"
+      ]
     }
   }
 }

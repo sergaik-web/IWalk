@@ -8,7 +8,7 @@ import { AppLoading } from "expo";
 import * as Font from "expo-font";
 import { Ionicons } from "@expo/vector-icons";
 import { NavigationContainer } from "@react-navigation/native";
-import { createStackNavigator } from '@react-navigation/stack';
+import { createStackNavigator } from "@react-navigation/stack";
 
 export default class App extends React.Component {
   constructor(props) {
@@ -35,20 +35,20 @@ export default class App extends React.Component {
 
     return (
       <Provider store={store}>
-          <NavigationContainer>
-            <Stack.Navigator>
-              <Stack.Screen
-                name="Home"
-                component={MainPage}
-                options={{ title: 'Главная' }}
-              />
-              <Stack.Screen
-                name="Contacts"
-                component={ContactsList}
-                options={{ headerTitle: props => <SearchPanel {...props} /> }}
-              />
-            </Stack.Navigator>
-          </NavigationContainer>
+        <NavigationContainer>
+          <Stack.Navigator>
+            <Stack.Screen
+              name="Home"
+              component={MainPage}
+              options={{ title: "Главная" }}
+            />
+            <Stack.Screen
+              name="Contacts"
+              component={ContactsList}
+              options={{ headerTitle: (props) => <SearchPanel {...props} /> }}
+            />
+          </Stack.Navigator>
+        </NavigationContainer>
       </Provider>
     );
   }

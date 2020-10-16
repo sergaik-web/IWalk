@@ -1,46 +1,58 @@
-import {Button, Footer, FooterTab, Text} from "native-base";
+import { Button, Footer, FooterTab, Text } from "native-base";
 import React from "react";
-import saveContactState from "../Scripts/saveContactState";
+import saveAllCheckedContact from "../Scripts/saveAllCheckedContact";
+import clearAllContacts from "../Scripts/clearAllContacts";
+import { setSelectedContacts, delSelectedContacts } from "../Actions/actions";
+import { connect } from "react-redux";
 
 const ContactListFooter = (props) => {
-  const {navigation} = props;
+  const { navigation, setSelectedContacts } = props;
+  const onPressSave = () => {
+    saveAllCheckedContact(setSelectedContacts);
+  };
+
   return (
     <Footer>
-      <FooterTab >
+      <FooterTab>
         <Button
           badge
           style={styles.stndButton}
-          onPress={()=>{
-            saveContactState();
-            navigation.push('Home');
+          onPress={() => {
+            onPressSave();
+            navigation.push("Home");
           }}
         >
           <Text style={styles.textContent}>Сохранить</Text>
         </Button>
       </FooterTab>
-      <FooterTab >
+      <FooterTab>
         <Button
           badge
           style={styles.stndButton}
-          onPress={()=>console.log('Очистить')}
+          onPress={() => {
+            delSelectedContacts();
+            clearAllContacts();
+          }}
         >
           <Text style={styles.textContent}>Очистить</Text>
         </Button>
       </FooterTab>
     </Footer>
-  )
+  );
 };
 
 const styles = {
   textContent: {
     fontSize: 16,
-    color: 'white',
+    color: "white",
   },
   stndButton: {
-    backgroundColor: 'red',
+    backgroundColor: "red",
     borderWidth: 1,
-    borderColor: 'white'
-  }
+    borderColor: "white",
+  },
 };
 
-export default ContactListFooter;
+const mapDispatchToProps = { setSelectedContacts, delSelectedContacts };
+
+export default connect(null, mapDispatchToProps)(ContactListFooter);

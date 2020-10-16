@@ -6,15 +6,17 @@ const getPhoneContacts = async () => {
   });
 
   if (data.length > 0) {
-    return data.map(item => {
-      if (item.phoneNumbers) {
-        return {
-          id: item.id,
-          name: item.name,
-          phone: item.phoneNumbers[0].number
+    return data
+      .map((item) => {
+        if (item.phoneNumbers) {
+          return {
+            id: item.id,
+            name: item.name,
+            phone: item.phoneNumbers[0].number,
+          };
         }
-      }
-    }).filter(item => item !== undefined && item !== null);
+      })
+      .filter((item) => item !== undefined && item !== null);
   }
 };
 

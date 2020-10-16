@@ -4,11 +4,8 @@ import { setIWalkStatus } from "../Actions/actions";
 import MainPageFooter from "../MainPageFooter/MainPageFooter";
 import IWalkButton from "../IWalkButton/IWalkButton";
 import WarningRow from "../WarningRow/WarningRow";
-import {
-  Container,
-  Content,
-} from "native-base";
-import { Row, Grid } from 'react-native-easy-grid';
+import { Container, Content } from "native-base";
+import { Row, Grid } from "react-native-easy-grid";
 
 const MainPage = (props) => {
   const { setIWalkStatus, iWalk, navigation } = props;
@@ -18,24 +15,24 @@ const MainPage = (props) => {
       <Content>
         <Grid>
           <Row style={styles.rowStyle}>
-            <IWalkButton iWalk={iWalk} setIWalkStatus={setIWalkStatus}/>
+            <IWalkButton iWalk={iWalk} setIWalkStatus={setIWalkStatus} />
           </Row>
-          <WarningRow/>
+          <WarningRow />
         </Grid>
       </Content>
-      <MainPageFooter navigation={navigation}/>
+      <MainPageFooter navigation={navigation} />
     </Container>
   );
 };
 
 const styles = {
   rowStyle: {
-    backgroundColor: 'white',
+    backgroundColor: "white",
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    marginTop: 100
-  }
+    justifyContent: "center",
+    alignItems: "center",
+    marginTop: 100,
+  },
 };
 
 const mapStateToProps = (state) => {

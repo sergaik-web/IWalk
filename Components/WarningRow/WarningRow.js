@@ -1,11 +1,11 @@
-import {Button, Text, Row } from "native-base";
+import { Button, Text, Row } from "native-base";
 import React from "react";
 
 const WarningRow = () => {
   return (
     <>
       <Row style={styles.rowStyleText}>
-        <Text style={{textAlign: 'center'}}>
+        <Text style={{ textAlign: "center" }}>
           Кнопка немедленного оповещения близких о том что у тебя возникли
           проблемы (рассылка смс по выбранным контактам)
         </Text>
@@ -22,31 +22,31 @@ const WarningRow = () => {
         </Button>
       </Row>
     </>
-  )
+  );
 };
 
 const styles = {
   rowStyle: {
-    backgroundColor: 'white',
+    backgroundColor: "white",
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    marginTop: 50
+    justifyContent: "center",
+    alignItems: "center",
+    marginTop: 50,
   },
   rowStyleText: {
-    backgroundColor: 'white',
+    backgroundColor: "white",
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    marginTop: 100
+    justifyContent: "center",
+    alignItems: "center",
+    marginTop: 100,
   },
   SOSButton: {
-    backgroundColor: 'red',
+    backgroundColor: "red",
     borderRadius: 15,
-    justifyContent: 'center',
+    justifyContent: "center",
     height: 80,
-    width: 150
-  }
+    width: 150,
+  },
 };
 
 export default WarningRow;
