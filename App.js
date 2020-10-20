@@ -1,55 +1,33 @@
-import { Provider } from "react-redux";
-import MainPage from "./Components/MainPage/MainPage";
-import ContactsList from "./Components/ContactsList/ContactsList";
-import SearchPanel from "./Components/SearchPanel/SearchPanel";
-import store from "./Components/Store/store";
-import React from "react";
-import { AppLoading } from "expo";
-import * as Font from "expo-font";
-import { Ionicons } from "@expo/vector-icons";
-import { NavigationContainer } from "@react-navigation/native";
-import { createStackNavigator } from "@react-navigation/stack";
+import {Provider} from 'react-redux';
+import MainPage from './Components/MainPage/MainPage';
+import ContactsList from './Components/ContactsList/ContactsList';
+import SearchPanel from './Components/SearchPanel/SearchPanel';
+import store from './Components/Store/store';
+import React from 'react';
+import {NavigationContainer} from '@react-navigation/native';
+import {createStackNavigator} from '@react-navigation/stack';
 
-export default class App extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      isReady: false,
-    };
-  }
+const App = () => {
+  const Stack = createStackNavigator();
 
-  async componentDidMount() {
-    await Font.loadAsync({
-      Roboto: require("native-base/Fonts/Roboto.ttf"),
-      Roboto_medium: require("native-base/Fonts/Roboto_medium.ttf"),
-      ...Ionicons.font,
-    });
-    this.setState({ isReady: true });
-  }
+  return (
+    <Provider store={store}>
+      <NavigationContainer>
+        <Stack.Navigator>
+          <Stack.Screen
+            name="Home"
+            component={MainPage}
+            options={{title: 'Главная'}}
+          />
+          <Stack.Screen
+            name="Contacts"
+            component={ContactsList}
+            options={{headerTitle: (props) => <SearchPanel {...props} />}}
+          />
+        </Stack.Navigator>
+      </NavigationContainer>
+    </Provider>
+  );
+};
 
-  render() {
-    const Stack = createStackNavigator();
-    if (!this.state.isReady) {
-      return <AppLoading />;
-    }
-
-    return (
-      <Provider store={store}>
-        <NavigationContainer>
-          <Stack.Navigator>
-            <Stack.Screen
-              name="Home"
-              component={MainPage}
-              options={{ title: "Главная" }}
-            />
-            <Stack.Screen
-              name="Contacts"
-              component={ContactsList}
-              options={{ headerTitle: (props) => <SearchPanel {...props} /> }}
-            />
-          </Stack.Navigator>
-        </NavigationContainer>
-      </Provider>
-    );
-  }
-}
+export default App;

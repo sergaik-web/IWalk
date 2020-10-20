@@ -1,8 +1,8 @@
-import { Body, Left, Right, Switch, Text, ListItem } from "native-base";
-import setItemStorage from "../../Scripts/setItemStorage";
-import removeItemStorage from "../../Scripts/removeItemStorage";
-import React, { useState, useEffect } from "react";
-import { connect } from "react-redux";
+import {Body, Left, Right, Switch, Text, ListItem} from 'native-base';
+import setItemStorage from '../../Scripts/setItemStorage';
+import removeItemStorage from '../../Scripts/removeItemStorage';
+import React, {useState, useEffect} from 'react';
+import {connect} from 'react-redux';
 
 const checkedInclude = (checkItem, arr) => {
   let isEnabled = false;
@@ -13,13 +13,13 @@ const checkedInclude = (checkItem, arr) => {
 };
 
 const ListItems = (props) => {
-  const { item, selectedContacts } = props;
+  const {item, selectedContacts} = props;
   const [isEnabled, setIsEnabled] = useState();
 
   useEffect(() => {
     const res = checkedInclude(item, selectedContacts);
     setIsEnabled(res);
-  }, []);
+  }, [item, selectedContacts]);
 
   const toggleSwitch = () => {
     setIsEnabled((previousState) => {
@@ -34,7 +34,7 @@ const ListItems = (props) => {
         <Text>{item.name}</Text>
       </Left>
       <Body>
-        <Text style={{ color: "grey", fontSize: 12 }}>{item.phone}</Text>
+        <Text style={{color: 'grey', fontSize: 12}}>{item.phone}</Text>
       </Body>
       <Right>
         <Switch onValueChange={toggleSwitch} value={isEnabled} />

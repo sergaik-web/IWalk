@@ -1,14 +1,14 @@
-import React from "react";
-import { connect } from "react-redux";
-import { setIWalkStatus } from "../Actions/actions";
-import MainPageFooter from "../MainPageFooter/MainPageFooter";
-import IWalkButton from "../IWalkButton/IWalkButton";
-import WarningRow from "../WarningRow/WarningRow";
-import { Container, Content } from "native-base";
-import { Row, Grid } from "react-native-easy-grid";
+import React from 'react';
+import {connect} from 'react-redux';
+import {setIWalkStatus} from '../Actions/actions';
+import MainPageFooter from '../MainPageFooter/MainPageFooter';
+import IWalkButton from '../IWalkButton/IWalkButton';
+import WarningRow from '../WarningRow/WarningRow';
+import {Container, Content} from 'native-base';
+import {Row, Grid} from 'react-native-easy-grid';
 
 const MainPage = (props) => {
-  const { setIWalkStatus, iWalk, navigation } = props;
+  const {setIWalkStatus, iWalk, navigation} = props;
 
   return (
     <Container>
@@ -27,10 +27,10 @@ const MainPage = (props) => {
 
 const styles = {
   rowStyle: {
-    backgroundColor: "white",
+    backgroundColor: 'white',
     flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
+    justifyContent: 'center',
+    alignItems: 'center',
     marginTop: 100,
   },
 };
@@ -41,6 +41,6 @@ const mapStateToProps = (state) => {
   };
 };
 
-const mapDispatchToProps = { setIWalkStatus };
+const mapDispatchToProps = {setIWalkStatus};
 
 export default connect(mapStateToProps, mapDispatchToProps)(MainPage);

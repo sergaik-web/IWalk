@@ -1,12 +1,12 @@
-import { Button, Footer, FooterTab, Text } from "native-base";
-import React from "react";
-import saveAllCheckedContact from "../Scripts/saveAllCheckedContact";
-import clearAllContacts from "../Scripts/clearAllContacts";
-import { setSelectedContacts, delSelectedContacts } from "../Actions/actions";
-import { connect } from "react-redux";
+import {Button, Footer, FooterTab, Text} from 'native-base';
+import React from 'react';
+import saveAllCheckedContact from '../Scripts/saveAllCheckedContact';
+import clearAllContacts from '../Scripts/clearAllContacts';
+import {setSelectedContacts, delSelectedContacts} from '../Actions/actions';
+import {connect} from 'react-redux';
 
 const ContactListFooter = (props) => {
-  const { navigation, setSelectedContacts } = props;
+  const {navigation, setSelectedContacts, delSelectedContacts} = props;
   const onPressSave = () => {
     saveAllCheckedContact(setSelectedContacts);
   };
@@ -19,9 +19,8 @@ const ContactListFooter = (props) => {
           style={styles.stndButton}
           onPress={() => {
             onPressSave();
-            navigation.push("Home");
-          }}
-        >
+            navigation.push('Home');
+          }}>
           <Text style={styles.textContent}>Сохранить</Text>
         </Button>
       </FooterTab>
@@ -32,8 +31,7 @@ const ContactListFooter = (props) => {
           onPress={() => {
             delSelectedContacts();
             clearAllContacts();
-          }}
-        >
+          }}>
           <Text style={styles.textContent}>Очистить</Text>
         </Button>
       </FooterTab>
@@ -44,15 +42,15 @@ const ContactListFooter = (props) => {
 const styles = {
   textContent: {
     fontSize: 16,
-    color: "white",
+    color: 'white',
   },
   stndButton: {
-    backgroundColor: "red",
+    backgroundColor: 'red',
     borderWidth: 1,
-    borderColor: "white",
+    borderColor: 'white',
   },
 };
 
-const mapDispatchToProps = { setSelectedContacts, delSelectedContacts };
+const mapDispatchToProps = {setSelectedContacts, delSelectedContacts};
 
 export default connect(null, mapDispatchToProps)(ContactListFooter);

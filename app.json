@@ -24,7 +24,8 @@
       "permissions": [
         "WRITE_EXTERNAL_STORAGE",
         "WRITE_CONTACTS",
-        "READ_CONTACTS"
+        "READ_CONTACTS",
+        "SEND_SMS"
       ]
     }
   }

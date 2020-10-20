@@ -1,9 +1,9 @@
-import AsyncStorage from "@react-native-community/async-storage";
+import AsyncStorage from '@react-native-community/async-storage';
 
 const clearAllContacts = async () => {
   try {
-    const keys = await AsyncStorage.clear();
-    console.log("clear");
+    await AsyncStorage.clear();
+    console.log('clear');
   } catch (e) {
     console.log(e);
   }

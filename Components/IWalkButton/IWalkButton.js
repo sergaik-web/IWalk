@@ -1,9 +1,9 @@
-import { Button, Text } from "native-base";
-import React from "react";
+import {Button, Text} from 'native-base';
+import React from 'react';
 
 const IWalkButton = (props) => {
-  const { iWalk, setIWalkStatus } = props;
-  const buttonData = ["Я ГУЛЯЮ!", "ЗАКОНЧИТЬ ГУЛЯТЬ"];
+  const {iWalk, setIWalkStatus} = props;
+  const buttonData = ['Я ГУЛЯЮ!', 'ЗАКОНЧИТЬ ГУЛЯТЬ'];
 
   return (
     <Button
@@ -11,8 +11,7 @@ const IWalkButton = (props) => {
       onPress={() => {
         setIWalkStatus();
         console.log(iWalk);
-      }}
-    >
+      }}>
       <Text style={styles.iWalkButtonText}>
         {!iWalk ? buttonData[0] : buttonData[1]}
       </Text>
@@ -22,15 +21,15 @@ const IWalkButton = (props) => {
 
 const styles = {
   iWalkButton: {
-    backgroundColor: "white",
+    backgroundColor: 'white',
     borderRadius: 15,
-    borderColor: "red",
+    borderColor: 'red',
     borderWidth: 1,
     height: 150,
   },
   iWalkButtonText: {
     fontSize: 22,
-    color: "red",
+    color: 'red',
   },
 };
 

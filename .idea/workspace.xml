@@ -1,40 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="92682c7d-586e-4524-8666-a397414ab212" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Components/Scripts/clearAllContacts.js" afterDir="false" />
+    <list default="true" id="59bce7a2-5b72-4fa9-84ff-ff64fd5227dd" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.expo-shared/assets.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Components/Actions/actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/Components/Actions/actions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Components/ContactListFooter/ContactListFooter.js" beforeDir="false" afterPath="$PROJECT_DIR$/Components/ContactListFooter/ContactListFooter.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Components/ContactsList/ContactsList.js" beforeDir="false" afterPath="$PROJECT_DIR$/Components/ContactsList/ContactsList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Components/ContactsList/ContactsListItems/ContactsListItems.js" beforeDir="false" afterPath="$PROJECT_DIR$/Components/ContactsList/ContactsListItems/ContactsListItems.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Components/ContactsList/ContactsListItems/ListItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/Components/ContactsList/ContactsListItems/ListItem.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Components/IWalkButton/IWalkButton.js" beforeDir="false" afterPath="$PROJECT_DIR$/Components/IWalkButton/IWalkButton.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Components/MainPage/MainPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/Components/MainPage/MainPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Components/MainPageFooter/MainPageFooter.js" beforeDir="false" afterPath="$PROJECT_DIR$/Components/MainPageFooter/MainPageFooter.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Components/Reducer/reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/Components/Reducer/reducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Components/Scripts/filterContacts.js" beforeDir="false" afterPath="$PROJECT_DIR$/Components/Scripts/filterContacts.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Components/Scripts/getPhoneContacts.js" beforeDir="false" afterPath="$PROJECT_DIR$/Components/Scripts/getPhoneContacts.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Components/Scripts/removeItemStorage.js" beforeDir="false" afterPath="$PROJECT_DIR$/Components/Scripts/removeItemStorage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Components/Scripts/saveContactState.js" beforeDir="false" afterPath="$PROJECT_DIR$/Components/Scripts/saveAllCheckedContact.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Components/Scripts/setItemStorage.js" beforeDir="false" afterPath="$PROJECT_DIR$/Components/Scripts/setItemStorage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Components/SearchPanel/SearchPanel.js" beforeDir="false" afterPath="$PROJECT_DIR$/Components/SearchPanel/SearchPanel.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Components/WarningRow/WarningRow.js" beforeDir="false" afterPath="$PROJECT_DIR$/Components/WarningRow/WarningRow.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.json" beforeDir="false" afterPath="$PROJECT_DIR$/app.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Components/Actions/actions.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Components/ContactListFooter/ContactListFooter.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Components/ContactsList/ContactsList.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Components/ContactsList/ContactsListItems/ContactsListItems.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Components/ContactsList/ContactsListItems/ListItem.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Components/IWalkButton/IWalkButton.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Components/MainPage/MainPage.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Components/MainPageFooter/MainPageFooter.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Components/Reducer/reducer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Components/Scripts/clearAllContacts.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Components/Scripts/filterContacts.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Components/Scripts/getPhoneContacts.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Components/Scripts/removeItemStorage.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Components/Scripts/saveAllCheckedContact.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Components/Scripts/setItemStorage.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Components/SearchPanel/SearchPanel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Components/Store/store.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Components/WarningRow/WarningRow.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/favicon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/splash.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/babel.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="JavaScript File" />
-      </list>
-    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -45,19 +48,16 @@
     <other-services-enabled>true</other-services-enabled>
     <auto-save>true</auto-save>
   </component>
-  <component name="ProjectId" id="1ioT2XFJTOtOpgKUld5g04JhRJG" />
+  <component name="ProjectId" id="1j8QZN2ykG596S4pfXGmy8HJN8e" />
   <component name="PropertiesComponent">
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="prettierjs.PrettierConfiguration.Package" value="C:\Users\Сегренёв\AppData\Roaming\npm\node_modules\prettier" />
-    <property name="settings.editor.selected.configurable" value="watcher.settings" />
-    <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2019.2.3\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
-  </component>
-  <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Сегренёв\WebstormProjects\IWalk\Components" />
-    </key>
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -72,15 +72,16 @@
     </option>
   </component>
   <component name="RunManager">
-    <configuration name="start" type="js.build_tools.npm" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="start" />
-      </scripts>
+    <configuration name="Android" type="ReactNative" factoryName="React Native">
+      <working-dir value="$PROJECT_DIR$" />
       <node-interpreter value="project" />
+      <react-native value="$PROJECT_DIR$/node_modules/react-native" />
+      <platform value="ANDROID" />
       <envs />
-      <method v="2" />
+      <only-packager />
+      <method v="2">
+        <option name="ReactNativePackager" enabled="true" />
+      </method>
     </configuration>
   </component>
   <component name="SvnConfiguration">
@@ -88,34 +89,16 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="92682c7d-586e-4524-8666-a397414ab212" name="Default Changelist" comment="" />
-      <created>1602572737181</created>
+      <changelist id="59bce7a2-5b72-4fa9-84ff-ff64fd5227dd" name="Default Changelist" comment="" />
+      <created>1603183293951</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1602572737181</updated>
-      <workItem from="1602572738439" duration="11683000" />
-      <workItem from="1602612230720" duration="5980000" />
-      <workItem from="1602618358446" duration="3088000" />
-      <workItem from="1602708106342" duration="1247000" />
-      <workItem from="1602709823557" duration="226000" />
-      <workItem from="1602710878265" duration="709000" />
-      <workItem from="1602711598602" duration="2632000" />
+      <updated>1603183293951</updated>
+      <workItem from="1603183295086" duration="619000" />
+      <workItem from="1603191177157" duration="7000" />
+      <workItem from="1603191187694" duration="4166000" />
+      <workItem from="1603195394440" duration="2586000" />
     </task>
-    <task id="LOCAL-00001" summary="feat: add redux in project">
-      <created>1602592752595</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1602592752595</updated>
-    </task>
-    <task id="LOCAL-00002" summary="feat: add navigation">
-      <created>1602712423459</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1602712423459</updated>
-    </task>
-    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -133,10 +116,5 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="feat: add redux in project" />
-    <MESSAGE value="feat: add navigation" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: add navigation" />
   </component>
 </project>

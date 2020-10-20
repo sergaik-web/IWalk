@@ -1,10 +1,10 @@
-import { Icon, Input, InputGroup } from "native-base";
-import React from "react";
-import { setSearchValue } from "../Actions/actions";
-import { connect } from "react-redux";
+import {Icon, Input, InputGroup} from 'native-base';
+import React from 'react';
+import {setSearchValue} from '../Actions/actions';
+import {connect} from 'react-redux';
 
 const SearchPanel = (props) => {
-  const { searchValue, setSearchValue } = props;
+  const {searchValue, setSearchValue} = props;
 
   return (
     <InputGroup>
@@ -27,6 +27,6 @@ const mapStateToProps = (state) => {
   };
 };
 
-const mapDispatchToProps = { setSearchValue };
+const mapDispatchToProps = {setSearchValue};
 
 export default connect(mapStateToProps, mapDispatchToProps)(SearchPanel);
