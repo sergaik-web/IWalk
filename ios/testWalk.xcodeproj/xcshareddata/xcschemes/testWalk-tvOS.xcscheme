@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "2D02E47A1E0B4A5D006451C7"
-               BuildableName = "testWalk-tvOS.app"
-               BlueprintName = "testWalk-tvOS"
-               ReferencedContainer = "container:testWalk.xcodeproj">
+               BuildableName = "IWalk-tvOS.app"
+               BlueprintName = "IWalk-tvOS"
+               ReferencedContainer = "container:IWalk.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "2D02E48F1E0B4A5D006451C7"
-               BuildableName = "testWalk-tvOSTests.xctest"
-               BlueprintName = "testWalk-tvOSTests"
-               ReferencedContainer = "container:testWalk.xcodeproj">
+               BuildableName = "IWalk-tvOSTests.xctest"
+               BlueprintName = "IWalk-tvOSTests"
+               ReferencedContainer = "container:IWalk.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -55,9 +55,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2D02E47A1E0B4A5D006451C7"
-            BuildableName = "testWalk-tvOS.app"
-            BlueprintName = "testWalk-tvOS"
-            ReferencedContainer = "container:testWalk.xcodeproj">
+            BuildableName = "IWalk-tvOS.app"
+            BlueprintName = "IWalk-tvOS"
+            ReferencedContainer = "container:IWalk.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -72,9 +72,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2D02E47A1E0B4A5D006451C7"
-            BuildableName = "testWalk-tvOS.app"
-            BlueprintName = "testWalk-tvOS"
-            ReferencedContainer = "container:testWalk.xcodeproj">
+            BuildableName = "IWalk-tvOS.app"
+            BlueprintName = "IWalk-tvOS"
+            ReferencedContainer = "container:IWalk.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import {Container, Text, Spinner} from 'native-base';
+import {Container, Spinner} from 'native-base';
 import ContactsListItems from './ContactsListItems/ContactsListItems';
 import ContactListFooter from '../ContactListFooter/ContactListFooter';
 import getPhoneContacts from '../Scripts/getPhoneContacts';
@@ -9,7 +9,7 @@ const ContactsList = (props) => {
   const [contacts, setContacts] = useState();
 
   useEffect(() => {
-    getPhoneContacts().then((contacts) => setContacts(contacts));
+    getPhoneContacts().then((con) => setContacts(con));
   }, []);
 
   if (!contacts) {

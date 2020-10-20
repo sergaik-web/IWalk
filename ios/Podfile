@@ -3,12 +3,12 @@ require_relative '../node_modules/@react-native-community/cli-platform-ios/nativ
 
 platform :ios, '10.0'
 
-target 'testWalk' do
+target 'IWalk' do
   config = use_native_modules!
 
   use_react_native!(:path => config["reactNativePath"])
 
-  target 'testWalkTests' do
+  target 'IWalkTests' do
     inherit! :complete
     # Pods for testing
   end
@@ -23,10 +23,10 @@ target 'testWalk' do
   end
 end
 
-target 'testWalk-tvOS' do
-  # Pods for testWalk-tvOS
+target 'IWalk-tvOS' do
+  # Pods for IWalk-tvOS
 
-  target 'testWalk-tvOSTests' do
+  target 'IWalk-tvOSTests' do
     inherit! :search_paths
     # Pods for testing
   end

@@ -1,4 +1,4 @@
-package com.testwalk;
+package com.IWalk;
 
 import com.facebook.react.ReactActivity;
 
