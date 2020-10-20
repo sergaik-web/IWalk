@@ -1,18 +1,18 @@
 import {Button, Text, Row} from 'native-base';
 import {connect} from 'react-redux';
-import SendSMS from 'react-native-send-sms';
+// import SendSMS from 'react-native-send-sms';
 import React from 'react';
 
 const WarningRow = (props) => {
   const {selectedContacts} = props;
-  const sendSMS = () => {
-    const arrPhone = selectedContacts.map((item) => item.phone);
-    arrPhone.map((item) => {
-      SendSMS.send(item, 'TEST', (msg) => {
-        alert(msg);
-      });
-    });
-  };
+  // const sendSMS = () => {
+  //   const arrPhone = selectedContacts.map((item) => item.phone);
+  //   arrPhone.map((item) => {
+  //     SendSMS.send(item, 'TEST', (msg) => {
+  //       alert(msg);
+  //     });
+  //   });
+  // };
 
   return (
     <>
@@ -27,7 +27,7 @@ const WarningRow = (props) => {
           large
           style={styles.SOSButton}
           onPress={() => {
-            sendSMS();
+            // sendSMS();
             console.log('SOS');
           }}>
           <Text>SOS!</Text>
