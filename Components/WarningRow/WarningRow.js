@@ -1,18 +1,26 @@
 import {Button, Text, Row} from 'native-base';
 import {connect} from 'react-redux';
-// import SendSMS from 'react-native-send-sms';
 import React from 'react';
+
+let SmsAndroid = require('react-native-sms-android');
 
 const WarningRow = (props) => {
   const {selectedContacts} = props;
-  // const sendSMS = () => {
-  //   const arrPhone = selectedContacts.map((item) => item.phone);
-  //   arrPhone.map((item) => {
-  //     SendSMS.send(item, 'TEST', (msg) => {
-  //       alert(msg);
-  //     });
-  //   });
-  // };
+  const sendSMS = () => {
+    console.log(SmsAndroid);
+    SmsAndroid.sms(
+      '+375295885494', // phone number to send sms to
+      'This is the sms text', // sms body
+      'sendIndirect', // sendDirect or sendIndirect
+      (err, message) => {
+        if (err) {
+          console.log(err);
+        } else {
+          console.log(message); // callback message
+        }
+      },
+    );
+  };
 
   return (
     <>
@@ -27,7 +35,7 @@ const WarningRow = (props) => {
           large
           style={styles.SOSButton}
           onPress={() => {
-            // sendSMS();
+            sendSMS();
             console.log('SOS');
           }}>
           <Text>SOS!</Text>
