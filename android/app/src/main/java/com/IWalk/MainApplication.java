@@ -11,6 +11,7 @@ import com.facebook.soloader.SoLoader;
 import java.lang.reflect.InvocationTargetException;
 import java.util.List;
 import com.rhaker.reactnativesmsandroid.RNSmsAndroidPackage;
+import com.marianhello.bgloc.react.BackgroundGeolocationPackage;
 
 public class MainApplication extends Application implements ReactApplication {
 

@@ -211,6 +211,7 @@ dependencies {
         implementation jscFlavor
     }
     implementation project(':react-native-sms-android')
+    implementation project(':@mauron85_react-native-background-geolocation')
 }
 
 // Run this once to be able to run the application with BUCK
