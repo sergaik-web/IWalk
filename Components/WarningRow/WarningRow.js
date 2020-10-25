@@ -1,58 +1,33 @@
 import {Button, Text, Row} from 'native-base';
 import {connect} from 'react-redux';
 import React from 'react';
-import BackgroundGeolocation from '@mauron85/react-native-background-geolocation';
-
-let SmsAndroid = require('react-native-sms-android');
+import {NativeModules, PermissionsAndroid} from 'react-native';
+let DirectSms = NativeModules.DirectSms;
 
 const WarningRow = (props) => {
   const {selectedContacts} = props;
-  const sendSMS = () => {
-    BackgroundGeolocation.configure({
-      desiredAccuracy: BackgroundGeolocation.HIGH_ACCURACY,
-      stationaryRadius: 50,
-      distanceFilter: 50,
-      notificationTitle: 'Background tracking',
-      notificationText: 'enabled',
-      debug: true,
-      startOnBoot: false,
-      stopOnTerminate: true,
-      locationProvider: BackgroundGeolocation.ACTIVITY_PROVIDER,
-      interval: 10000,
-      fastestInterval: 5000,
-      activitiesInterval: 10000,
-      stopOnStillActivity: false,
-      url: 'http://192.168.81.15:3000/location',
-      httpHeaders: {
-        'X-FOO': 'bar',
-      },
-      // customize post properties
-      postTemplate: {
-        lat: '@latitude',
-        lon: '@longitude',
-        foo: 'bar', // you can also add your own properties
-      },
-    });
-
-    BackgroundGeolocation.start();
-    setInterval(() => {
-      BackgroundGeolocation.getCurrentLocation((location) =>
-        console.log(JSON.stringify(location)),
+  const sendSMS = async () => {
+    try {
+      const granted = await PermissionsAndroid.request(
+        PermissionsAndroid.PERMISSIONS.SEND_SMS,
+        {
+          title: 'YourProject App Sms Permission',
+          message:
+            'YourProject App needs access to your inbox ' +
+            'so you can send messages in background.',
+          buttonNeutral: 'Ask Me Later',
+          buttonNegative: 'Cancel',
+          buttonPositive: 'OK',
+        },
       );
-    }, 10000);
-
-    SmsAndroid.sms(
-      '+375295885494', // phone number to send sms to
-      'This is the sms text', // sms body
-      'sendIndirect', // sendDirect or sendIndirect
-      (err, message) => {
-        if (err) {
-          console.log(err);
-        } else {
-          console.log(message); // callback message
-        }
-      },
-    );
+      if (granted === PermissionsAndroid.RESULTS.GRANTED) {
+        DirectSms.sendDirectSms('+375445885494', 'This is a direct message');
+      } else {
+        console.log('SMS permission denied');
+      }
+    } catch (err) {
+      console.warn(err);
+    }
   };
 
   return (

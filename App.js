@@ -9,7 +9,6 @@ import {createStackNavigator} from '@react-navigation/stack';
 
 const App = () => {
   const Stack = createStackNavigator();
-
   return (
     <Provider store={store}>
       <NavigationContainer>

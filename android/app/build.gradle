@@ -210,7 +210,6 @@ dependencies {
     } else {
         implementation jscFlavor
     }
-    implementation project(':react-native-sms-android')
     implementation project(':@mauron85_react-native-background-geolocation')
 }
 
