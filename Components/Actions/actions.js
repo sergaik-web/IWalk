@@ -24,9 +24,25 @@ const delSelectedContacts = () => {
   };
 };
 
+const setIwalkTimer = (time) => {
+  return {
+    type: 'SET_IWALK_TIMER',
+    payload: time,
+  };
+};
+
+const setPermissionsGranted = (granded) => {
+  return {
+    type: 'SET_PERMISSIONS_GRANTED',
+    payload: granded,
+  };
+};
+
 export {
   setIWalkStatus,
   setSearchValue,
   setSelectedContacts,
   delSelectedContacts,
+  setIwalkTimer,
+  setPermissionsGranted,
 };

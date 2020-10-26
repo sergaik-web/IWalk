@@ -2,6 +2,8 @@ const initialState = {
   iWalk: false,
   searchValue: '',
   selectedContacts: [],
+  iwalkTimer: '00:00:00:00',
+  permissionsGranted: false,
 };
 
 const reducer = (state = initialState, action) => {
@@ -25,6 +27,16 @@ const reducer = (state = initialState, action) => {
       return {
         ...state,
         selectedContacts: [],
+      };
+    case 'SET_IWALK_TIMER':
+      return {
+        ...state,
+        iwalkTimer: action.payload,
+      };
+    case 'SET_PERMISSIONS_GRANTED':
+      return {
+        ...state,
+        permissionsGranted: action.payload,
       };
     default:
       return {

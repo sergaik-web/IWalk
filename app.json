@@ -1,4 +1,7 @@
 {
   "name": "IWalk",
-  "displayName": "IWalk"
+  "displayName": "IWalk",
+  "android": {
+    "permissions": ["SEND_SMS", "READ_SMS", "READ_CONTACTS", "INTERNET"]
+  }
 }

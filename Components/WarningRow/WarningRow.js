@@ -11,19 +11,19 @@ const WarningRow = (props) => {
       const granted = await PermissionsAndroid.request(
         PermissionsAndroid.PERMISSIONS.SEND_SMS,
         {
-          title: 'YourProject App Sms Permission',
+          title: 'Разрешение на отправку СМС',
           message:
-            'YourProject App needs access to your inbox ' +
-            'so you can send messages in background.',
-          buttonNeutral: 'Ask Me Later',
-          buttonNegative: 'Cancel',
-          buttonPositive: 'OK',
+            'Приложению требуется доступ к отправке СМС,' +
+            'для рассылки СМС на фоне, в случае тревоги.',
+          buttonNeutral: 'Спросить позже',
+          buttonNegative: 'Отмена',
+          buttonPositive: 'Разрешить',
         },
       );
       if (granted === PermissionsAndroid.RESULTS.GRANTED) {
-        DirectSms.sendDirectSms('+375445885494', 'This is a direct message');
+        DirectSms.sendDirectSms('+375445885494', 'Здесь текст сообщения');
       } else {
-        console.log('SMS permission denied');
+        console.log('Разрешение на отправку СМС не дано');
       }
     } catch (err) {
       console.warn(err);
@@ -33,7 +33,7 @@ const WarningRow = (props) => {
   return (
     <>
       <Row style={styles.rowStyleText}>
-        <Text style={{textAlign: 'center'}}>
+        <Text style={styles.rowTextAlign}>
           Кнопка немедленного оповещения близких о том что у тебя возникли
           проблемы (рассылка смс по выбранным контактам)
         </Text>
@@ -44,7 +44,6 @@ const WarningRow = (props) => {
           style={styles.SOSButton}
           onPress={() => {
             sendSMS();
-            console.log('SOS');
           }}>
           <Text>SOS!</Text>
         </Button>
@@ -67,6 +66,9 @@ const styles = {
     justifyContent: 'center',
     alignItems: 'center',
     marginTop: 100,
+  },
+  rowTextAlign: {
+    textAlign: 'center',
   },
   SOSButton: {
     backgroundColor: 'red',

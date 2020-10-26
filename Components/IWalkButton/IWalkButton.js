@@ -2,40 +2,47 @@ import {Button, Text} from 'native-base';
 import React, {useEffect} from 'react';
 import BackgroundGeolocation from '@mauron85/react-native-background-geolocation';
 import {ToastAndroid} from 'react-native';
+import {setIwalkTimer} from '../Actions/actions';
+import {connect} from 'react-redux';
+import iwalkTimer from '../Scripts/iwalkTimer';
+
+BackgroundGeolocation.configure({
+  desiredAccuracy: BackgroundGeolocation.HIGH_ACCURACY,
+  stationaryRadius: 50,
+  distanceFilter: 50,
+  notificationTitle: 'Отслеживание геолокации',
+  notificationText: 'Включено',
+  debug: false,
+  startOnBoot: false,
+  stopOnTerminate: true,
+  locationProvider: BackgroundGeolocation.ACTIVITY_PROVIDER,
+  interval: 10000,
+  fastestInterval: 5000,
+  activitiesInterval: 10000,
+  notificationIconColor: '#fd0000',
+  stopOnStillActivity: false,
+  httpHeaders: {
+    'X-FOO': 'bar',
+  },
+  // customize post properties
+  postTemplate: {
+    lat: '@latitude',
+    lon: '@longitude',
+    foo: 'bar', // you can also add your own properties
+  },
+});
 
 const IWalkButton = (props) => {
-  const {iWalk, setIWalkStatus} = props;
+  const {iWalk, setIWalkStatus, setIwalkTimer} = props;
   const buttonData = ['Я ГУЛЯЮ!', 'ЗАКОНЧИТЬ ГУЛЯТЬ'];
-
-  BackgroundGeolocation.configure({
-    desiredAccuracy: BackgroundGeolocation.HIGH_ACCURACY,
-    stationaryRadius: 50,
-    distanceFilter: 50,
-    notificationTitle: 'Background tracking',
-    notificationText: 'enabled',
-    debug: false,
-    startOnBoot: false,
-    stopOnTerminate: true,
-    locationProvider: BackgroundGeolocation.ACTIVITY_PROVIDER,
-    interval: 10000,
-    fastestInterval: 5000,
-    activitiesInterval: 10000,
-    notificationIconColor: '#fd0000',
-    stopOnStillActivity: false,
-    httpHeaders: {
-      'X-FOO': 'bar',
-    },
-    // customize post properties
-    postTemplate: {
-      lat: '@latitude',
-      lon: '@longitude',
-      foo: 'bar', // you can also add your own properties
-    },
-  });
 
   useEffect(() => {
     let checkLocation;
+    let iwalkTimerInterval;
     if (iWalk) {
+      iwalkTimerInterval = setInterval(() => {
+        iwalkTimer(setIwalkTimer);
+      }, 1000);
       BackgroundGeolocation.start();
       checkLocation = setInterval(() => {
         BackgroundGeolocation.getCurrentLocation((location) =>
@@ -46,8 +53,9 @@ const IWalkButton = (props) => {
     return () => {
       BackgroundGeolocation.stop();
       clearInterval(checkLocation);
+      clearInterval(iwalkTimerInterval);
     };
-  }, [iWalk]);
+  }, [iWalk, setIwalkTimer]);
 
   return (
     <Button
@@ -77,4 +85,6 @@ const styles = {
   },
 };
 
-export default IWalkButton;
+const mapDispatchToProps = {setIwalkTimer};
+
+export default connect(null, mapDispatchToProps)(IWalkButton);
