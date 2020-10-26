@@ -1,7 +1,6 @@
 import {Button, Text} from 'native-base';
 import React, {useEffect} from 'react';
 import BackgroundGeolocation from '@mauron85/react-native-background-geolocation';
-import {ToastAndroid} from 'react-native';
 import {setIwalkTimer} from '../Actions/actions';
 import {connect} from 'react-redux';
 import iwalkTimer from '../Scripts/iwalkTimer';
@@ -46,7 +45,7 @@ const IWalkButton = (props) => {
       BackgroundGeolocation.start();
       checkLocation = setInterval(() => {
         BackgroundGeolocation.getCurrentLocation((location) =>
-          ToastAndroid.show(JSON.stringify(location), ToastAndroid.SHORT),
+          console.log(location.latitude, location.longitude),
         );
       }, 10000);
     }

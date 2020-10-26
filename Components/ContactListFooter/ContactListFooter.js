@@ -19,7 +19,7 @@ const ContactListFooter = (props) => {
           style={styles.stndButton}
           onPress={() => {
             onPressSave();
-            navigation.push('Home');
+            navigation.goBack();
           }}>
           <Text style={styles.textContent}>Сохранить</Text>
         </Button>
