@@ -4,32 +4,9 @@ import BackgroundGeolocation from '@mauron85/react-native-background-geolocation
 import {setIwalkTimer} from '../Actions/actions';
 import {connect} from 'react-redux';
 import iwalkTimer from '../Scripts/iwalkTimer';
+import configBgGloc from './configBgGLoc';
 
-BackgroundGeolocation.configure({
-  desiredAccuracy: BackgroundGeolocation.HIGH_ACCURACY,
-  stationaryRadius: 50,
-  distanceFilter: 50,
-  notificationTitle: 'Отслеживание геолокации',
-  notificationText: 'Включено',
-  debug: false,
-  startOnBoot: false,
-  stopOnTerminate: true,
-  locationProvider: BackgroundGeolocation.ACTIVITY_PROVIDER,
-  interval: 10000,
-  fastestInterval: 5000,
-  activitiesInterval: 10000,
-  notificationIconColor: '#fd0000',
-  stopOnStillActivity: false,
-  httpHeaders: {
-    'X-FOO': 'bar',
-  },
-  // customize post properties
-  postTemplate: {
-    lat: '@latitude',
-    lon: '@longitude',
-    foo: 'bar', // you can also add your own properties
-  },
-});
+BackgroundGeolocation.configure(configBgGloc);
 
 const IWalkButton = (props) => {
   const {iWalk, setIWalkStatus, setIwalkTimer} = props;

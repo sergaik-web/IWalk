@@ -12,6 +12,8 @@ target 'IWalk' do
 
   pod 'react-native-sms', :path => '../node_modules/react-native-sms'
 
+  pod 'RealmJS', :path => '../node_modules/realm'
+
   target 'IWalkTests' do
     inherit! :complete
     # Pods for testing
